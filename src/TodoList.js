@@ -1,9 +1,14 @@
 import React from "react";
 
-function TodoList() {
-    <h1>
-        Hola react
-    </h1>
+
+function TodoList(props) {
+    return(
+        <section>
+            <ul>
+                {props.children}
+            </ul>
+        </section>
+    );
 }
 
-export default TodoList
+export {TodoList}
