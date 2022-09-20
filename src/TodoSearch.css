@@ -1,0 +1,35 @@
+.TodoSearch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.TodoSearch input{
+    position: absolute;
+    width: 80%;
+    height: 30px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.TodoSearch input::placeholder {
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+}
+
+.TodoSearch button {
+    position: relative;
+    height: 58px;
+    width: 60px;
+    align-self: flex-end;
+    top: -2px;
+    margin-right: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.TodoSearch button:active{
+    background-color: rgb(122, 122, 122);
+} 

@@ -1,9 +1,12 @@
 import React from "react";
+import './TodoCounter.css'
 
 
 function TodoCounter() {
     return (
-        <h2>Cambio de tiitulo</h2>
+        <div className="TodoCounter">
+            <h2>Lista de TODOS</h2>
+        </div>
     )
 }
 
