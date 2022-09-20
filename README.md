@@ -1,2 +1,2 @@
 # Todos-App
-An app of todos using React
+An app of todos using React.js
