@@ -12,24 +12,48 @@ const todos=[
     {text:'Llorar con la llorona', completed:false}
 ];
 
+let searchedTodos = []
 
 function App() {
 
-    // Todos los componentes deben estar dentro de un solo componente
-    // por estandar es React.Fragment
+const [searchValue, setSearchValue] = React.useState('')
+const completedTodos = todos.filter(todo => !!todo.completed).length
+const totalTodos = todos.length
+//     // Todos los componentes deben estar dentro de un solo componente
+//     // por estandar es React.Fragment
 
+
+    if (!searchValue.length >= 1) {
+      searchedTodos = todos;
+    } else {
+      searchedTodos = todos.filter(todo => {
+        const todoText = todo.text.toLowerCase();
+        const searchText = searchValue.toLowerCase();
+        return todoText.includes(searchText);
+      });
+    }
+    
  return (
-   
+
     <React.Fragment>
 
-      <TodoCounter/>
+      <TodoCounter
+         total={totalTodos}
+         completed={completedTodos}
+        
+      />
 
-      <TodoSearch/>
+      <TodoSearch
+         searchValue={searchValue}
+         setSearchValue={setSearchValue}
+      
+      />
      
       <TodoList>
-        {todos.map(todo => (
+        {searchedTodos.map(todo => (
             <TodoItem key={todo.text} text={todo.text}/>
         ))}
+
       </TodoList>
 
       <CreateTodoButton/>
