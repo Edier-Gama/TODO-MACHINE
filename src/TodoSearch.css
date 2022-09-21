@@ -11,13 +11,22 @@
     height: 30px;
     padding: 10px;
     border-radius: 15px;
+    font-weight: 400;
+    background: #F9FBFC;
+    font-size: 18px;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
 }
 
 .TodoSearch input::placeholder {
     position: relative;
     font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
     font-size: 17px;
 }
+
+.TodoSearch input:focus {
+    outline-color: #00ff3c;
+  }
 
 .TodoSearch button {
     position: relative;

@@ -8,7 +8,7 @@
 
 .newTodoIcon button {
     position: relative;
-    top: 60px;
+    left: 35%;
     width: 70px;
     height: 70px;
     border: 2px solid black;
