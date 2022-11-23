@@ -6,41 +6,58 @@ import React from 'react';
 import './App.css';
 import { TodoItem } from './TodoItem';
 
-const todos=[
-    {text:'Cortar cebolla', completed:false},
-    {text:'Tormar el curso de intro a react', completed:false},
-    {text:'Llorar con la llorona', completed:false}
+const defaultTodos=[
+    {text:'Cortar cebolla', completed:undefined},
+    {text:'Tormar el curso de intro a react', completed:true},
+    {text:'Llorar con la llorona', completed:true}
 ];
 
 let searchedTodos = []
 
+
+
 function App() {
 
+// usando el estado seguiremos el input del buscador y asi actualizarlo   
 const [searchValue, setSearchValue] = React.useState('')
-const completedTodos = todos.filter(todo => !!todo.completed).length
-const totalTodos = todos.length
-//     // Todos los componentes deben estar dentro de un solo componente
-//     // por estandar es React.Fragment
+const [todos, setTodos] = React.useState(defaultTodos)
 
+
+
+// Con esta funcion medimos los todos y se actualizan segun se completen o eliminen
+const completedTodos = todos.filter(todo => todo.completed == true).length
+const totalTodos = todos.length
+
+
+// sistema de filtrado del buscador
 
     if (!searchValue.length >= 1) {
-      searchedTodos = todos;
+      searchedTodos = defaultTodos;
     } else {
-      searchedTodos = todos.filter(todo => {
+      searchedTodos = defaultTodos.filter(todo => {
         const todoText = todo.text.toLowerCase();
         const searchText = searchValue.toLowerCase();
         return todoText.includes(searchText);
       });
     }
-    
+
+const completeTodos = (text) => {
+   const todoIndex = todos.findIndex(todo => todo.text === text)
+   const newTodos = [...todos]
+   todos[todoIndex].completed = true
+   todos[todoIndex].text = 'Completado '
+   setTodos(newTodos)
+}
+
  return (
+  // Todos los componentes deben estar dentro de un solo componente
+// por estandar es React.Fragment
 
     <React.Fragment>
 
       <TodoCounter
          total={totalTodos}
          completed={completedTodos}
-        
       />
 
       <TodoSearch
@@ -51,10 +68,17 @@ const totalTodos = todos.length
      
       <TodoList>
         {searchedTodos.map(todo => (
-            <TodoItem key={todo.text} text={todo.text}/>
+            <TodoItem 
+            
+            key={todo.text} 
+            text={todo.text}
+            completed = {todo.completed}
+            onComplete={() => completeTodos(todo.text)}
+            />
         ))}
 
       </TodoList>
+      
 
       <CreateTodoButton/>
 
