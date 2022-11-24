@@ -14,8 +14,8 @@ function TodoItem(props){
             </span>
             <span 
             className="material-symbols-outlined delete"
-            >
-                delete
+            onClick={props.onDelete}>
+            delete
             </span>
 
             <p>{props.text}</p>

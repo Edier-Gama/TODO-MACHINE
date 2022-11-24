@@ -49,6 +49,14 @@ const completeTodos = (text) => {
    setTodos(newTodos)
 }
 
+
+const deleteTodos = (text) => {
+  const todoIndex = todos.findIndex(todo => todo.text === text)
+  const newTodos = [...todos]
+  todos[todoIndex].completed = true
+  todos[todoIndex].text = 'Eliminado'
+  setTodos(newTodos)
+}
  return (
   // Todos los componentes deben estar dentro de un solo componente
 // por estandar es React.Fragment
@@ -74,6 +82,7 @@ const completeTodos = (text) => {
             text={todo.text}
             completed = {todo.completed}
             onComplete={() => completeTodos(todo.text)}
+            onDelete={() => deleteTodos(todo.text)}
             />
         ))}
 
