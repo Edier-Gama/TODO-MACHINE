@@ -1,1 +1,8 @@
-
+section p {
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    text-align: center;
+    font-weight: bold;
+    top: 15px;color: aliceblue;
+}
