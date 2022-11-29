@@ -3,12 +3,12 @@ import '../styles/CreateTodoButton.css'
 
 function CreateTodoButton(props) {
 
-    const onClickButton = (msg) => {
-        alert(`mensaje = ${msg}`)
+    const onClickButton = () => {
+        props.setOpenModal(!props.openModal)
     }
     return(
         <div className="newTodoIcon">
-            <button onClick={() => onClickButton('Aquí se debería abrir un Modal')}>
+            <button onClick={onClickButton}>
                 <p>+</p>
             </button>
         </div>

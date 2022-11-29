@@ -8,12 +8,13 @@
 
 .newTodoIcon button {
     position: relative;
-    left: 35%;
-    top: 80px;
-    width: 70px;
-    height: 70px;
+    left: 34%;
+    top: 130px;
+    width: 80px;
+    height: 80px;
     border: 2px solid black;
     border-radius: 50px;
+    z-index: 1;
 }
 
 .newTodoIcon button p {

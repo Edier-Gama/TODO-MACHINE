@@ -1,0 +1,16 @@
+.Modal {
+    position: relative;
+    height: 300px;
+    display: flex;
+    margin: 35px;
+    justify-content: center;
+    bottom: 150px;
+
+}
+
+.Modal p{
+    color: antiquewhite;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}

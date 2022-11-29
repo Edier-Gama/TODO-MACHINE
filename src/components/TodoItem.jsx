@@ -18,7 +18,7 @@ function TodoItem(props){
             delete
             </span>
 
-            <p>{props.text}</p>
+            <p className="todoText">{props.text}</p>
         
         </div>
        

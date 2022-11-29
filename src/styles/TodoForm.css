@@ -1,0 +1,56 @@
+.form {
+    padding: 15px;
+}
+.textArea {
+    height: 150px;
+    width: 260px;
+    padding: 20px;
+    /* border-radius: 25px; */
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+.textArea::placeholder {
+    position: relative;
+    left: 20px;
+    width: 240px;
+    top: 40%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+}
+.textArea:focus {
+    outline-color: #00ff3c;
+}
+
+.buttonsContainer {
+    position: relative;    
+    display: flex;
+    justify-content: center;
+    top: 50px;
+    width: 250px;
+    height: 50px;
+}
+
+.buttonsContainer button {
+    height: 60px;
+    width: 180px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+}
+
+.cancelButton {
+    margin-left:10px;
+}
+.submitButton {
+    position: relative;
+    left: 40px;
+}
+
+
+.buttonsContainer button:active {
+    transform: scale(1.2);
+    transition: transform 200ms;
+}
+
