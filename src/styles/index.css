@@ -1,5 +1,6 @@
 body{
     box-sizing: border-box;
+    height: 720px;
     margin: 0;
     padding: 0;
 }
@@ -10,14 +11,14 @@ html {
 
 footer {
     position: relative;
-    height: 50px;
-    top: 100px;
+    height: 60px;
+    top: 320px;
     background-color: rgb(66, 255, 66);
 }
 
 footer p {
     position: relative;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 18px;
     text-align: center;
     font-weight: bold;
