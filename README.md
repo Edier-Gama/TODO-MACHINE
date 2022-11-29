@@ -1,13 +1,13 @@
-# TODO MACHINE
+# TODO MACHINE ⚛️
 
-**TODO MACHINE is a React app that helps you to organize your daily tasks** 📚
+**Todo Machine is a React app that helps you to organize your daily tasks** 📚
 
 ## Deployment:
-```
-[Github Pages] - using the production build of React ✅
-```
-[GH Pages] (https://edier-gama.github.io/Todo-Machine/)
 
+[Github Pages] 👉 (https://edier-gama.github.io/Todo-Machine/) 👈
+```
+ - using the production build of React ✅
+```
 
 ## Funcionalities:
 
