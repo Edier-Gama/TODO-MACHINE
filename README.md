@@ -1,4 +1,31 @@
-# Todos-App
-An app of todos using React.js
+# TODO MACHINE
 
-### Deploy:  [https://edier-gama.github.io/Todo-Machine/]
+**TODO MACHINE is a React app that helps you to organize your daily tasks** 📚
+
+## Deployment:
+```
+[Github Pages] - using the production build of React ✅
+```
+[GH Pages] (https://edier-gama.github.io/Todo-Machine/)
+
+
+## Funcionalities:
+
+- Add new Todos
+- Mark as done your Todos
+- Delete your Todos
+- Search Todos by keywords
+- Count the amount of completed Todos
+
+## Built With
+
+* [REACT.JS - JSX SYNTAX] ⚛️ - [CSS] 
+
+# Preview
+![edier-gama github io_Todo-Machine_(Nest Hub Max)](https://user-images.githubusercontent.com/96151177/204606458-342bb75a-24eb-45d6-a8b5-d1871547ed13.png)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+* Made with 💚 at Platzi
