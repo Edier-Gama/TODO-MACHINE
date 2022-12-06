@@ -1,6 +1,5 @@
-import { getQueriesForElement } from "@testing-library/react";
 import React from"react";
-import '../styles/TodoItem.css'
+import './TodoItem.css'
 
 function TodoItem(props){
 

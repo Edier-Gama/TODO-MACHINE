@@ -1,6 +1,6 @@
 import React  from "react";
-import { TodoContext } from "./TodoContext";
-import '../styles/TodoForm.css'
+import { TodoContext } from "../TodoContext/index";
+import './TodoForm.css'
 
 function TodoForm(props) {
 
