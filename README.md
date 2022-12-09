@@ -4,7 +4,7 @@
 
 ## Deployment:
 
-[Github Pages] 👉 (https://edier-gama.github.io/Todo-Machine/) 👈
+[Github Pages] 👉 (https://edier-gama.github.io/TODO-MACHINE/) 👈
 ```
  - using the production build of React ✅
 ```
