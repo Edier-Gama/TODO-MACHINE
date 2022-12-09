@@ -1,17 +1,12 @@
 import React from "react";
 import './TodoSearch.css'
-import {TodoContext} from '../TodoContext/index'
 
 
-function TodoSearch() {
-
-    const {searchValue, setSearchValue} = React.useContext(TodoContext)
-
+function TodoSearch({searchValue, setSearchValue}) {
     const onSearchValueChange = (event) => {
        setSearchValue(event.target.value)
     }
     return (
-
         <React.Fragment>
             <div className="TodoSearch">
                <input className="TodoSearch-Input" 
