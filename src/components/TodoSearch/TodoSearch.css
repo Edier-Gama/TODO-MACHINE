@@ -5,6 +5,10 @@
     align-content: center;
 }
 
+.TodoSearch input:disabled {
+    opacity: 25%;
+}
+
 .TodoSearch input{
     position: absolute;
     width: 80%;

@@ -7,12 +7,13 @@ import { TodoCounter } from '../TodoCounter/TodoCounter';
 import { TodoSearch } from '../TodoSearch/TodoSearch';
 import { TodoList } from '../TodoList/TodoList';
 import { CreateTodoButton } from '../CreateTodoButton/CreateTodoButton';
-import { TodoItem } from '../TodoItem/TodoItem';
 import {Modal} from '../TodoModal/Modal'
 import {TodoForm} from '../TodoForm/TodoForm'
 import { TodoError } from '../TodoError/TodoError';
 import { EmptyTodos } from '../TodoEmpty/EmptyTodos';
 import { TodoLoading } from '../TodoLoading/TodoLoading';
+import { EmptyResults } from '../EmptyResults/EmptyResults';
+import { ShowTodos } from '../ShowTodos/ShowTodos';
 
 
 function App() {
@@ -36,10 +37,12 @@ return(
   <React.Fragment>
     <TodoHeader>
     <TodoCounter
+      loading={loading}
       totalTodos={totalTodos}
       completedTodos={completedTodos}
       />
       <TodoSearch
+      loading={loading}
       searchValue={searchValue}
       setSearchValue={setSearchValue}
       />
@@ -49,19 +52,20 @@ return(
       error={error}
       loading={loading}
       searchedTodos={searchedTodos}
+      totalTodos={totalTodos}
       onError={() => <TodoError/>}
       onLoading={() => <TodoLoading/>}
       onEmptyTodos={() => <EmptyTodos/>}
-      render={todo => (
-        <TodoItem 
-            key={todo.text} 
-            text={todo.text}
-            completed = {todo.completed}
-            onComplete={() => completeTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
-         />
-     )}
+      onEmptyResults={() => <EmptyResults
+        searchValue={searchValue}
+      />}
+      onShowTodos={(todo) => <ShowTodos
+       todo={todo}
+       completeTodo={completeTodo}
+       deleteTodo={deleteTodo}
+      />}
     />
+   
 
     {openModal && (
     <Modal>

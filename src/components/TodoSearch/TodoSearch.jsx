@@ -2,7 +2,7 @@ import React from "react";
 import './TodoSearch.css'
 
 
-function TodoSearch({searchValue, setSearchValue}) {
+function TodoSearch({searchValue, setSearchValue, loading}) {
     const onSearchValueChange = (event) => {
        setSearchValue(event.target.value)
     }
@@ -12,7 +12,9 @@ function TodoSearch({searchValue, setSearchValue}) {
                <input className="TodoSearch-Input" 
                placeholder='Busca un ToDo'
                onChange={onSearchValueChange}
-               value={searchValue}/>
+               value={searchValue}
+               disabled={loading}
+               />
         
                <button className="TodoSearch-Button">🔎</button>
             </div>

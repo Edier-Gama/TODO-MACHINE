@@ -13,3 +13,7 @@
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
 }
+
+.inactive {
+    opacity: 25%;
+}
