@@ -14,11 +14,11 @@
     width: 80%;
     height: 30px;
     padding: 10px;
-    border-radius: 15px;
     font-weight: 400;
     background: #F9FBFC;
     font-size: 18px;
     box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+    cursor: pointer;
 }
 
 .TodoSearch input::placeholder {
@@ -28,8 +28,8 @@
     font-size: 17px;
 }
 
-.TodoSearch input:focus {
-    outline-color: #00ff3c;
+.TodoSearch input:hover {
+    outline-color: #88aaffd7;
   }
 
 .TodoSearch button {
@@ -46,3 +46,21 @@
 .TodoSearch button:active{
     background-color: rgb(122, 122, 122);
 } 
+
+@media (min-width: 1000px) {
+    .TodoSearch {
+        position: relative;
+        top: -140px;
+    }
+    .TodoSearch input {
+        position: relative;
+        width: 40%;
+        left: 20%;
+    }
+
+    .TodoSearch button {
+        position: relative;
+        top: -56px;
+        right: 20px;
+    }
+}

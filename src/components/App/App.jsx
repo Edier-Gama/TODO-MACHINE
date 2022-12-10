@@ -77,6 +77,7 @@ return(
     </Modal>
     )}
    <CreateTodoButton
+     loading={loading}
      setOpenModal={setOpenModal}
      openModal={openModal}
    />

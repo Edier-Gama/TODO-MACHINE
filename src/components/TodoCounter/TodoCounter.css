@@ -1,6 +1,6 @@
 .TodoCounter h2{
     font-family: 'Roboto Condensed', sans-serif;
-    color: white;
+    color: rgba(31, 31, 31, 0.766);
     font-size: 40px;
     text-align: center;
 }
@@ -11,9 +11,21 @@
     text-align: center;
     top: -20px;
     font-family: 'Roboto Condensed', sans-serif;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .inactive {
     opacity: 25%;
+}
+
+
+@media (min-width: 1000px) {
+    .TodoCounter {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        left: 5%;
+        width: 400px;
+        top: 20px;
+    }
 }

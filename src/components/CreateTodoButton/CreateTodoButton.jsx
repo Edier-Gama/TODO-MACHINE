@@ -6,10 +6,12 @@ function CreateTodoButton(props) {
     const onClickButton = () => {
         props.setOpenModal(!props.openModal)
     }
+    const className = !props.loading ? 'newTodoIcon': `newTodoIcon inactive`
+
     return(
-        <div className="newTodoIcon">
+        <div className={className}>
             <button onClick={onClickButton}>
-                <p>+</p>
+                <p>ADD</p>
             </button>
         </div>
     )

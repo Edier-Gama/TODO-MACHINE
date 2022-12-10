@@ -27,7 +27,7 @@ return (
        <textarea 
        value={newTodoValue}
        onChange={onChange}
-       placeholder="Escribe tu nuevo TODO uwu"
+       placeholder="WRITE YOUR NEW TODO..."
        className="textArea"
        />
 
@@ -37,14 +37,14 @@ return (
           onClick={onCancel}
           className='cancelButton'
         >
-            Cancelar
+            CANCEL
         </button>
 
         <button
           type="submit"
           className="submitButton"
         >
-            Añadir
+            ADD
         </button>
        </div>
     </form>

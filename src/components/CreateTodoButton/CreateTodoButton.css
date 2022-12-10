@@ -9,12 +9,11 @@
 .newTodoIcon button {
     position: relative;
     left: 34%;
-    top: 130px;
     width: 80px;
     height: 80px;
-    border: 2px solid black;
     border-radius: 50px;
     z-index: 1;
+    cursor: pointer;
 }
 
 .newTodoIcon button p {
@@ -24,4 +23,24 @@
 .newTodoIcon button:active{
     transform: scale(1.2);
     transition: transform 500ms;
+}
+.newTodoIcon button:hover {
+    transform: scale(1.2);
+    transition: transform 200ms;
+    border:2px solid #88aaffd7;
+}
+.inactive {
+    opacity: 25%;
+}
+
+@media (min-width: 1000px) {
+    .newTodoIcon {
+        position: fixed;
+        right: 42%;
+        top: -80px;
+    }
+
+    .newTodoIcon button {
+        top: 130px;
+    }
 }

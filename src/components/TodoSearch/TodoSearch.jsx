@@ -10,13 +10,16 @@ function TodoSearch({searchValue, setSearchValue, loading}) {
         <React.Fragment>
             <div className="TodoSearch">
                <input className="TodoSearch-Input" 
-               placeholder='Busca un ToDo'
+               placeholder='SEARCH TODOS'
                onChange={onSearchValueChange}
                value={searchValue}
                disabled={loading}
                />
         
-               <button className="TodoSearch-Button">🔎</button>
+               <button 
+               className="TodoSearch-Button"
+               disabled={loading}
+               >🔎</button>
             </div>
         </React.Fragment>
     )
