@@ -22,7 +22,9 @@
 * [REACT.JS - JSX SYNTAX] ⚛️ - [CSS] 
 
 # Preview
-![edier-gama github io_Todo-Machine_(Nest Hub Max)](https://user-images.githubusercontent.com/96151177/204606458-342bb75a-24eb-45d6-a8b5-d1871547ed13.png)
+
+![localhost_3000_TODO-MACHINE(Nest Hub)](https://user-images.githubusercontent.com/96151177/206815742-0f835c80-2c90-4812-842e-a7877996a30a.png)
+
 
 ## License
 
