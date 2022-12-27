@@ -1,10 +1,31 @@
 import React from "react";
 
 function useLocalStorage(itemName, initialValue) {
-    const [error, setError] = React.useState(false)
-    const [loading, setLoading]  = React.useState(true)
-    const [item, setItem] = React.useState(initialValue);
-  
+    
+  const actionTypes = {
+    error: 'ERROR',
+    succsess: 'SUCCESS',
+    set_item: 'SET-ITEM'
+  }
+
+    const reducerObject = (state, payload) => ({
+    [actionTypes.error]: {...state, error: true},
+    [actionTypes.succsess]: {...state, loading: false, item: payload},
+    [actionTypes.set_item]: {...state, item: payload}
+  })
+
+    const reducer = (state, action) => {
+    return reducerObject(state, action.payload)[action.type] || state
+  }
+
+    const initialState = {error: false, loading: true, item: initialValue} 
+    const [state, dispatch] = React.useReducer(reducer, initialState)
+    const {error, loading, item } = state  
+
+    const onError = () => dispatch({type: actionTypes.error})
+    const onSuccess = (parsedItem) => dispatch({type: actionTypes.succsess, payload: parsedItem})
+    const onSetItem = (newItem) => dispatch({type: actionTypes.set_item, payload: newItem})
+
     React.useEffect(() => {
       setTimeout(() => {
         try {
@@ -17,33 +38,30 @@ function useLocalStorage(itemName, initialValue) {
         } else {
           parsedItem = JSON.parse(localStorageItem);
         }
-         setItem(parsedItem)
-         setLoading(false)
+          onSuccess(parsedItem)
        } catch (error) {
-        setError(error)
+          onError(error)
        }
-      }, 1000)
+      }, 3000)
     })
   
     const saveItem = (newItem) => {
       try {
         const stringifiedItem = JSON.stringify(newItem);
-        localStorage.setItem(itemName, stringifiedItem);
-        setItem(newItem);
-  
+        localStorage.setItem(itemName, stringifiedItem)
+        onSetItem(newItem)
       } catch (error) {
-        
-        setError(error)
+        onError(error)
       }
     };
   
-    return {   
-      item,
-      saveItem,
-      loading,
+    return {
+      item, 
+      saveItem, 
+      loading, 
       error
     };
-  }
+  } 
 
 
 export {useLocalStorage}

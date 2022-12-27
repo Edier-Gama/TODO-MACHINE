@@ -7,5 +7,5 @@ body{
 
 html {
     overflow-x: hidden;
-    background-image: radial-gradient(circle at 87.5% 12.5%, #d5efe0 0, #d2f0e3 4.17%, #d0f0e6 8.33%, #cef0e9 12.5%, #cdf0ed 16.67%, #ccf0f0 20.83%, #cbf0f3 25%, #cceff5 29.17%, #cdeff8 33.33%, #ceeefa 37.5%, #d0eefc 41.67%, #d2edfe 45.83%, #d5ecff 50%, #d8ebff 54.17%, #dceaff 58.33%, #dfe9ff 62.5%, #e3e8ff 66.67%, #e7e7ff 70.83%, #ebe6fe 75%, #efe5fc 79.17%, #f2e4fa 83.33%, #f6e3f7 87.5%, #f9e3f5 91.67%, #fbe2f2 95.83%, #fee1ef 100%);
+    height: 800px;
 }

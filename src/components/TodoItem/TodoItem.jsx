@@ -3,20 +3,21 @@ import './TodoItem.css'
 
 function TodoItem(props){
 
-
+    
     return(
         <div className="TodoItem-Div">
-            <span 
-                className={"material-symbols-outlined check"}
-                onClick={props.onComplete}> 
-                check_circle
-            </span>
-            <span 
-            className="material-symbols-outlined delete"
-            onClick={props.onDelete}>
-            delete
-            </span>
-
+            <img 
+            className="check"
+            src="https://cdn-icons-png.flaticon.com/512/60/60731.png" 
+            alt="" 
+            onClick={props.onComplete}
+            />
+            <img 
+            className="delete"
+            src="https://cdn-icons-png.flaticon.com/512/3221/3221803.png" 
+            alt="" 
+            onClick={props.onDelete}
+            />
             <p className="todoText">{props.text}</p>
         
         </div>

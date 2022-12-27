@@ -6,14 +6,12 @@ import { TodoHeader } from "../TodoHeader";
 import { TodoCounter } from '../TodoCounter/TodoCounter';
 import { TodoSearch } from '../TodoSearch/TodoSearch';
 import { TodoList } from '../TodoList/TodoList';
-import { CreateTodoButton } from '../CreateTodoButton/CreateTodoButton';
-import {Modal} from '../TodoModal/Modal'
 import {TodoForm} from '../TodoForm/TodoForm'
 import { TodoError } from '../TodoError/TodoError';
-import { EmptyTodos } from '../TodoEmpty/EmptyTodos';
 import { TodoLoading } from '../TodoLoading/TodoLoading';
 import { EmptyResults } from '../EmptyResults/EmptyResults';
 import { ShowTodos } from '../ShowTodos/ShowTodos';
+import { ChangeWithListener } from '../ChangeAlert';
 
 
 function App() {
@@ -41,6 +39,11 @@ return(
       totalTodos={totalTodos}
       completedTodos={completedTodos}
       />
+     <TodoForm
+      addTodo={addTodo}
+      openModal={openModal}
+      setOpenModal={setOpenModal}
+      /> 
       <TodoSearch
       loading={loading}
       searchValue={searchValue}
@@ -55,32 +58,18 @@ return(
       totalTodos={totalTodos}
       onError={() => <TodoError/>}
       onLoading={() => <TodoLoading/>}
-      onEmptyTodos={() => <EmptyTodos/>}
       onEmptyResults={() => <EmptyResults
         searchValue={searchValue}
       />}
       onShowTodos={(todo) => <ShowTodos
+       key={todo.text}
        todo={todo}
        completeTodo={completeTodo}
        deleteTodo={deleteTodo}
       />}
     />
-   
 
-    {openModal && (
-    <Modal>
-      <TodoForm
-      addTodo={addTodo}
-      openModal={openModal}
-      setOpenModal={setOpenModal}
-      />
-    </Modal>
-    )}
-   <CreateTodoButton
-     loading={loading}
-     setOpenModal={setOpenModal}
-     openModal={openModal}
-   />
+   <ChangeWithListener/>
    </React.Fragment>
   )
 

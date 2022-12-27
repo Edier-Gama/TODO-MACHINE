@@ -1,69 +1,78 @@
-.form {
-    padding: 15px;
+.inactive {
+    cursor: not-allowed;
+    opacity: 14%;
 }
-.textArea {
-    border: 2px solid black;
-    height: 150px;
-    width: 90%;
-    padding: 20px;
-    font-size: 20px;
-    font-family: 'Quicksand', sans-serif;
+.cancelButton {
+    display: none;
+}
+button:active {
+    transform: scale(1.2);
+    transition: transform 400ms;
+}
+button {
+    position: relative;
+    font-weight: bolder;
+    top: 5px;
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: aliceblue;
+    background-color: rgb(4, 90, 202);
+}
+.form {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 17px;
+    padding: 10px;
+    height: 130px;
+}
 
+.textArea {
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    height: 100px;
+    padding: 10px;
 }
 
 .textArea::placeholder {
     position: relative;
-    left: 20px;
-    width: 240px;
-    top: 40%;
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-size: 17px;
 }
-.textArea:focus {
-    outline-color: #000000;
-}
 
-.buttonsContainer {
+@media (min-width:1000px) {
+    .cancelButton {
+        display: none;
+    }
+    .textArea {
+        padding: 20px;
+        width: 40%;
+        height: 45px;
+   }
+   button {
     position: relative;    
     display: flex;
     justify-content: center;
-    top: 20px;
-    margin-bottom: 200px;
-    width: 100%;
+    padding: 17px;
+    width: 43.7%;
     height: 50px;
-}
+   }
 
-.buttonsContainer button {
+   button {
     cursor: pointer;
     height: 60px;
-    width: 190px;
     font-family: 'Quicksand', sans-serif;
     font-size: 17px;
 }
 
-.buttonsContainer button:active {
+    button:active {
     transform: scale(1.2);
     transition: transform 400ms;
 }
-
-
-@media (min-width:1000px) {
-    .textArea {
-        position: fixed;
-        left: 5%;
-        width: 35%;
-        top: 200px;
-        height: 100px;
-   }
-   .buttonsContainer{
-    position: fixed;
-    top: 350px;
-    right: 25.5%;
-   }
-   .buttonsContainer button {
-     margin: 10px;
-     border-radius: 70px;
-   }
-
 }

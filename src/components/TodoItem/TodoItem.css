@@ -1,36 +1,31 @@
 .TodoItem-Div {
-    position: relative;
-    top: 50px;
     display: flex;
-    padding: 10px;
-    word-wrap: break-word;
+    position: relative;
     align-items:center ;
     flex-direction: column;
-    height: 150px;
-    margin: 15px;
+    overflow: hidden;
+    margin: 17px;
+    top: -40px;
+    padding: 10px;
+    height: 130px;
     border: 2px solid  rgb(42, 42, 42);
-    background-image: radial-gradient(circle at 87.5% 12.5%, #eff9f3 0, #eef9f4 4.17%, #eef9f5 8.33%, #edf9f6 12.5%, #ecf9f8 16.67%, #ecf9f9 20.83%, #ecf9fa 25%, #ecf9fb 29.17%, #ecf9fc 33.33%, #edf9fd 37.5%, #edf9fe 41.67%, #eef8fe 45.83%, #eff8ff 50%, #f0f8ff 54.17%, #f1f7ff 58.33%, #f3f7ff 62.5%, #f4f6ff 66.67%, #f5f6ff 70.83%, #f7f6ff 75%, #f8f5fe 79.17%, #faf5fe 83.33%, #fbf5fd 87.5%, #fcf4fc 91.67%, #fdf4fb 95.83%, #fef4fa 100%);
 }
 
 .TodoItem-Div:hover {
   transform: scale(1.1);
-  transition: transform 1s;
+  transition: transform 100ms;
 }
 
 .TodoItem-Div p{ 
+    position: relative;
     font-size: 20px;
+    top: -30px;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
 }
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+img {
+  width: 30px;
 }
-
 .delete{
     position: relative;
     top: -20px;
@@ -45,16 +40,15 @@
 }
 
 .todoText {
-  top: -10px;
-  max-width: 300px;
   color: black;
 }
 
 
 @media (min-width: 1000px) {
   .TodoItem-Div {
+    position: relative;
     width: 42%;
     left: 49%;
-    top: -170px;
+    top: -370px;
     }
 }

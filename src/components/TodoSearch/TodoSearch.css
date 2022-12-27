@@ -1,8 +1,12 @@
 .TodoSearch {
     display: flex;
+    position: relative;
     flex-direction: column;
-    align-items: center;
-    align-content: center;
+    overflow: hidden;
+    top: 40px;
+    margin: 17px;
+    padding: 10px;
+    height: 130px;
 }
 
 .TodoSearch input:disabled {
@@ -11,14 +15,14 @@
 
 .TodoSearch input{
     position: absolute;
-    width: 80%;
+    width: 85%;
     height: 30px;
     padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
     font-weight: 400;
     background: #F9FBFC;
-    font-size: 18px;
-    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
-    cursor: pointer;
 }
 
 .TodoSearch input::placeholder {
@@ -38,7 +42,6 @@
     width: 60px;
     align-self: flex-end;
     top: -2px;
-    margin-right: 20px;
     border: 2px solid black;
     border-radius: 15px;
 }
@@ -49,9 +52,14 @@
 
 @media (min-width: 1000px) {
     .TodoSearch {
-        position: relative;
-        top: -140px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    top: -320px;
+   }
+  
     .TodoSearch input {
         position: relative;
         width: 40%;
