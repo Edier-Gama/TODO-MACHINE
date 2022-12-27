@@ -23,8 +23,7 @@
 
 # Preview
 
-![edier-gama github io_TODO-MACHINE_](https://user-images.githubusercontent.com/96151177/209727584-c43396d5-c892-46b4-8cb4-480e24b9d55f.png)
-
+![todo-machine](https://user-images.githubusercontent.com/96151177/209727906-56cb1ad4-0264-4dc5-ba80-16cd2352f280.PNG)
 
 ## License
 
